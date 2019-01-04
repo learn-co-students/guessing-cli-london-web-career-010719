@@ -1,11 +1,27 @@
-require "pry"
+# def run_guessing_game
+#   input = ""
+#   while input
+#     puts "Guess a number between 1 and 6."
+#     input = gets.downcase.chomp
+#     random_number = rand(1..6).to_s
+#     case input.chomp
+#     when random_number
+#       puts "You guessed the correct number!"
+#     when 'exit'
+#       puts "Goodbye!"
+#       break
+#     else
+#       puts "The computer guessed #{random_number}."
+#     end
+#   end
+# end
 
+#require "pry"
+#
 def run_guessing_game
   puts "Guess a number!"
   guessed_number = gets.chomp
-  if guessed_number.to_i == 0
-    guessed_number = guessed_number
-  else
+  if guessed_number.to_i != 0
     guessed_number = guessed_number.to_i
   end
   rand_number = rand(10)+1
@@ -21,7 +37,11 @@ def run_guessing_game
   end
 end
 
-#run_guessing_game
+run_guessing_game
+
+
+
+
 # def run_guessing_game
 #   puts "Guess a number!"
 #   guessing_engine
